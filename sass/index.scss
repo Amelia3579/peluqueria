@@ -1,0 +1,16 @@
+/*Imports*/
+
+/*MISC*/
+@import "./misc/variables";
+@import "./misc/normalize";
+@import "./misc/mixins";
+@import "./misc/animaciones";
+
+/*PARTIALS*/
+@import "./partials/header";
+@import "./partials/footer";
+
+/*VIEWS*/
+@import "./views/inicio";
+@import "./views/nuestrosTrabajos";
+@import "./views/ventaProductos";

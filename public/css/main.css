@@ -1,0 +1,184 @@
+@charset "UTF-8";
+/*Imports*/
+/*MISC*/
+/*Reseteo*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+/*Globales*/
+html {
+  font-size: 62.5%;
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%; }
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #89f5cf; }
+
+a {
+  text-decoration: solid; }
+
+ul {
+  list-style-type: none; }
+
+h1 {
+  margin-top: 1em;
+  font-size: 2.5em; }
+
+@keyframes pelosLocos {
+  from {
+    margin-right: 100%;
+    width: 150%; }
+  75% {
+    font-size: 300%;
+    width: 130%;
+    margin-right: 50%; }
+  to {
+    margin-right: 100%;
+    width: 100%; } }
+
+@keyframes movimiento {
+  from {
+    margin-left: -100%;
+    width: 300%; }
+  75% {
+    margin-left: 75%;
+    width: 150%; }
+  to {
+    margin-left: 0%;
+    width: 100%; } }
+
+/*PARTIALS*/
+.navbar {
+  display: flex;
+  align-items: center;
+  height: 13vh;
+  background-color: #fbb49a; }
+  .navbarLogo {
+    justify-content: flex-start; }
+    .navbarLogo .LogoImg {
+      margin: 2em 80em 2em 6em; }
+  .navbarListaInd {
+    display: flex;
+    gap: 3em;
+    margin-left: 80em; }
+    .navbarListaInd a {
+      color: black;
+      font-size: 2em; }
+  .navbarLista {
+    display: flex;
+    gap: 3em; }
+    .navbarLista a {
+      color: black;
+      font-size: 2em; }
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 13vh;
+  width: 100%;
+  margin-top: auto;
+  font-size: 2.3em;
+  padding: 2em 7em; }
+
+/*VIEWS*/
+.Inicio {
+  display: flex;
+  overflow: hidden;
+  margin: 8em 0 18.3em 0; }
+  .InicioPict {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 2.5em 4em; }
+    .InicioPict .PictImg {
+      border-radius: 1.5em;
+      box-shadow: 0 0 1em; }
+  .InicioTítulo p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10em;
+    margin-top: .5em;
+    animation: 5s infinite alternate pelosLocos; }
+
+.contenedor {
+  display: flex;
+  flex-direction: row; }
+  .contenedor .posiciónSlider {
+    display: flex;
+    justify-content: center; }
+    .contenedor .posiciónSlider .Slider {
+      display: flex;
+      max-width: 500px;
+      height: 400px;
+      width: 100%;
+      margin-top: 2em;
+      overflow-x: hidden;
+      scroll-snap-type: x mandatory;
+      border-radius: 1.5em;
+      box-shadow: 0 0 1em; }
+      .contenedor .posiciónSlider .Slider img {
+        width: 100%;
+        object-fit: cover;
+        scroll-snap-align: center; }
+
+.contenedor {
+  display: flex;
+  flex-direction: column; }
+  .contenedorPosición {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 4em 1em 4em 0; }
+    .contenedorPosición .posiciónTarj {
+      display: flex;
+      align-items: center;
+      width: 23%;
+      max-width: 1080px;
+      margin-left: 2.3em;
+      border-radius: 1.5em;
+      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+      background-color: white;
+      cursor: default;
+      transition: all 400ms ease; }
+      .contenedorPosición .posiciónTarj:hover {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9); }
+      .contenedorPosición .posiciónTarj .posiciónTarjImg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 55%;
+        padding: 0 4em;
+        margin: 2em;
+        border-radius: 1.5em;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+        overflow: hidden;
+        background-color: white; }
+      .contenedorPosición .posiciónTarj .posiciónTarjCont {
+        width: 45%;
+        text-align: center;
+        padding-right: 2em; }
+        .contenedorPosición .posiciónTarj .posiciónTarjCont h2 {
+          font-size: 2em; }
+        .contenedorPosición .posiciónTarj .posiciónTarjCont p {
+          font-size: 1.4em;
+          line-height: 1.5em;
+          margin: .8em 0 1.5em 0; }
+        .contenedorPosición .posiciónTarj .posiciónTarjCont a {
+          display: inline-block;
+          padding: .4em;
+          margin: .3em;
+          border: 1px solid #5fb395;
+          border-radius: .8em;
+          font-weight: bold;
+          color: #46bd93;
+          font-size: 1.4em; }
+          .contenedorPosición .posiciónTarj .posiciónTarjCont a:hover {
+            background-color: #48c599;
+            color: white; }

@@ -1,0 +1,40 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 13vh;
+    background-color: rgb(251, 180, 154);
+
+    &Logo {
+        justify-content: flex-start;
+
+        .LogoImg {
+            margin: 2em 80em 2em 6em;
+        }
+    }
+
+    &ListaInd {
+        display: flex;
+        gap: 3em;
+        margin-left: 80em;
+
+        a {
+            @include lista_header (black, 2em);
+        }
+    }
+
+    &Lista {
+        display: flex;
+        gap: 3em;
+
+        a {
+            @include lista_header (black, 2em);
+        }
+    }
+
+
+    // &ListaInd {
+    //     display: flex;
+    //     gap: 3em;
+    //     margin-left: 60em;
+    // }
+}

@@ -1,0 +1,73 @@
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+
+
+    &Posición {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      margin: 4em 1em 4em 0;
+
+      .posiciónTarj {
+        display: flex;
+        align-items: center;
+        width: 23%;
+        max-width: 1080px;
+        margin-left: 2.3em;
+        border-radius: 1.5em;
+        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+        background-color: white;
+        cursor: default;
+        transition: all 400ms ease;
+
+        &:hover {
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9);
+        }
+
+        .posiciónTarjImg {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 55%;
+          padding: 0 4em;
+          margin: 2em;
+          border-radius: 1.5em;
+          box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          background-color: white;
+        }
+
+        .posiciónTarjCont {
+          width: 45%;
+          text-align: center;
+          padding-right: 2em;
+
+          h2 {
+            font-size: 2em;
+          }
+
+          p {
+            font-size: 1.4em;
+            line-height: 1.5em;
+            margin: .8em 0 1.5em 0;
+          }
+
+          a {
+            display: inline-block;
+            padding: .4em;
+            margin: .3em;
+            border: 1px solid #5fb395;
+            border-radius: .8em;
+            font-weight: bold;
+            @include lista_header (#46bd93, 1.4em);
+
+            &:hover {
+              background-color: #48c599;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }

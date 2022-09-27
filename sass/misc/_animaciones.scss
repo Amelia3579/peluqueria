@@ -1,0 +1,48 @@
+@keyframes pelosLocos {
+    from {
+        margin-right: 100%;
+        width: 150%;
+      }
+    
+      75% {
+        font-size: 300%;
+        width: 130%;
+        margin-right: 50%;
+      }
+    
+      to {
+        margin-right: 100%;
+        width: 100%;
+      }
+    
+}
+
+@keyframes movimiento {
+  from {
+    margin-left: -100%;
+    width: 300%;
+  }
+
+  //   25% {
+  //   margin-left: 75%; 
+  //   width: 25%;
+  //   }
+
+  //  50% {
+  //    margin-left: 50%; 
+  //    width: 50%;
+  //  }
+
+   75% {
+     margin-left: 75%; 
+     width: 150%;
+   }
+
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
