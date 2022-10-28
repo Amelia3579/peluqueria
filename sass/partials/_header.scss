@@ -18,7 +18,7 @@
         margin-left: 80em;
 
         a {
-            @include lista_header (black, 2em);
+            @include lista_header (rgb(30, 30, 30), 2em);
         }
     }
 
@@ -27,14 +27,8 @@
         gap: 3em;
 
         a {
-            @include lista_header (black, 2em);
+            @include lista_header (rgb(30, 30, 30), 2em);
         }
     }
 
-
-    // &ListaInd {
-    //     display: flex;
-    //     gap: 3em;
-    //     margin-left: 60em;
-    // }
 }

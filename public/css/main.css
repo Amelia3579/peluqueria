@@ -25,10 +25,6 @@ a {
 ul {
   list-style-type: none; }
 
-h1 {
-  margin-top: 1em;
-  font-size: 2.5em; }
-
 @keyframes pelosLocos {
   from {
     margin-right: 100%;
@@ -67,20 +63,20 @@ h1 {
     gap: 3em;
     margin-left: 80em; }
     .navbarListaInd a {
-      color: black;
+      color: #1e1e1e;
       font-size: 2em; }
   .navbarLista {
     display: flex;
     gap: 3em; }
     .navbarLista a {
-      color: black;
+      color: #1e1e1e;
       font-size: 2em; }
 
 footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #FFFFFF;
+  background-color: #fbb49a;
   height: 13vh;
   width: 100%;
   margin-top: auto;
@@ -128,28 +124,92 @@ footer {
         object-fit: cover;
         scroll-snap-align: center; }
 
+h4 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: 2em 0 1.5em 18em; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  width: 40%;
+  margin: 0 45rem;
+  background-color: #fcffff;
+  border-radius: 1.5em;
+  box-shadow: 0px 1px 10px #1e1e1e; }
+  form:hover {
+    box-shadow: 5px 5px 20px #1e1e1e; }
+
+label {
+  display: block;
+  margin: 0 3rem;
+  padding: .3rem;
+  font-size: 1.8em;
+  margin-top: .8em; }
+
+input {
+  margin: 0 1.5rem 0 3rem;
+  width: 90%;
+  height: 3.6rem;
+  background-color: #89f5cf;
+  border: 1px solid #fcffff;
+  border-radius: .8em;
+  font-size: 1.2vw;
+  padding: .5em; }
+  input:hover {
+    background-color: #6abca0; }
+  input:focus {
+    background-color: #89f5cf; }
+
+.btn--resetear {
+  background-color: #6abca0;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .5em;
+  margin: .8rem 3rem;
+  width: 90%;
+  border: 1px solid #fcffff;
+  border-radius: 1.5rem; }
+  .btn--resetear:hover {
+    background-color: #275e4a;
+    color: #fcffff; }
+
+.btn--enviar {
+  background-color: #368166;
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: .5em;
+  margin: .8rem 3rem;
+  width: 90%;
+  border: 1px solid #fcffff;
+  border-radius: 1.5rem; }
+  .btn--enviar:hover {
+    background-color: #275e4a;
+    color: #fcffff; }
+
 .contenedor {
   display: flex;
   flex-direction: column; }
-  .contenedorPosición {
+  .contenedor .contenedorPosicion {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    margin: 4em 1em 4em 0; }
-    .contenedorPosición .posiciónTarj {
+    margin: 10em 1em 3em 0; }
+    .contenedor .contenedorPosicion .posicionTarj {
       display: flex;
       align-items: center;
       width: 23%;
       max-width: 1080px;
       margin-left: 2.3em;
       border-radius: 1.5em;
-      box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
-      background-color: white;
+      box-shadow: 0px 1px 10px #1e1e1e;
+      background-color: #fcffff;
       cursor: default;
       transition: all 400ms ease; }
-      .contenedorPosición .posiciónTarj:hover {
-        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.9); }
-      .contenedorPosición .posiciónTarj .posiciónTarjImg {
+      .contenedor .contenedorPosicion .posicionTarj:hover {
+        box-shadow: 5px 5px 20px #1e1e1e; }
+      .contenedor .contenedorPosicion .posicionTarj .posicionTarjImg {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -157,28 +217,65 @@ footer {
         padding: 0 4em;
         margin: 2em;
         border-radius: 1.5em;
-        box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0px 1px 10px #1e1e1e;
         overflow: hidden;
-        background-color: white; }
-      .contenedorPosición .posiciónTarj .posiciónTarjCont {
+        background-color: #fcffff; }
+      .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont {
         width: 45%;
-        text-align: center;
+        text-align: left;
         padding-right: 2em; }
-        .contenedorPosición .posiciónTarj .posiciónTarjCont h2 {
-          font-size: 2em; }
-        .contenedorPosición .posiciónTarj .posiciónTarjCont p {
-          font-size: 1.4em;
-          line-height: 1.5em;
-          margin: .8em 0 1.5em 0; }
-        .contenedorPosición .posiciónTarj .posiciónTarjCont a {
+        .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont h2 {
+          font-size: 1.8em;
+          margin-bottom: 1em; }
+        .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont p {
+          font-size: 1.5em;
+          line-height: 1.1em;
+          margin: .8em 0 1.1em 0; }
+        .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont .estilosBtn {
           display: inline-block;
           padding: .4em;
-          margin: .3em;
-          border: 1px solid #5fb395;
+          margin: .3em .3em .3em 0;
+          border: 2px solid #5fb395;
           border-radius: .8em;
           font-weight: bold;
-          color: #46bd93;
-          font-size: 1.4em; }
-          .contenedorPosición .posiciónTarj .posiciónTarjCont a:hover {
-            background-color: #48c599;
-            color: white; }
+          background-color: #89f5cf;
+          color: #1e1e1e;
+          font-size: 1.5em; }
+        .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont .estilosSobreBtn {
+          display: inline-block;
+          padding: .4em;
+          margin: .3em .3em .3em 0;
+          border: 2px solid #5fb395;
+          border-radius: .8em;
+          font-weight: bold;
+          background-color: #48c599;
+          color: #fcffff; }
+
+table {
+  width: 80%;
+  margin: 4em 12em;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 20px;
+  border-radius: 1.5em;
+  background-color: #eceeee; }
+  table th {
+    font-size: 1.2vw;
+    font-weight: bold;
+    padding: .8em;
+    border-radius: .8em;
+    background-color: #89f5cf; }
+  table td {
+    font-size: 1.3vw;
+    padding: .5em;
+    background-color: #89f5cf;
+    border-radius: .8em; }
+  table caption {
+    font-size: 1.5vw;
+    font-weight: bold;
+    margin: .5em; }
+
+h5 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  margin: .5em 0 4em 5em; }
