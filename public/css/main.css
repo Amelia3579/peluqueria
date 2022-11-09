@@ -25,6 +25,28 @@ a {
 ul {
   list-style-type: none; }
 
+h1 {
+  font-size: 2.4em; }
+
+h2 {
+  font-size: 2.2em;
+  margin: 2em; }
+
+h3 {
+  font-size: 2em;
+  font-weight: bold;
+  margin: .5em 0 4em 5em; }
+
+h4 {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: 2em 0 1.5em 18em; }
+
+h5 {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin-bottom: 1em; }
+
 @keyframes pelosLocos {
   from {
     margin-right: 100%;
@@ -103,31 +125,44 @@ footer {
     margin-top: .5em;
     animation: 5s infinite alternate pelosLocos; }
 
-.contenedor {
-  display: flex;
-  flex-direction: row; }
-  .contenedor .posiciónSlider {
-    display: flex;
-    justify-content: center; }
-    .contenedor .posiciónSlider .Slider {
+.cont {
+  display: flex; }
+  .cont .estilosSlider {
+    display: flex; }
+    .cont .estilosSlider .posiciónSlider {
       display: flex;
-      max-width: 500px;
-      height: 400px;
-      width: 100%;
-      margin-top: 2em;
-      overflow-x: hidden;
-      scroll-snap-type: x mandatory;
-      border-radius: 1.5em;
-      box-shadow: 0 0 1em; }
-      .contenedor .posiciónSlider .Slider img {
+      justify-content: center; }
+      .cont .estilosSlider .posiciónSlider .Slider {
+        display: flex;
+        max-width: 500px;
+        height: 400px;
         width: 100%;
-        object-fit: cover;
-        scroll-snap-align: center; }
-
-h4 {
-  font-size: 1.5vw;
-  font-weight: bold;
-  margin: 2em 0 1.5em 18em; }
+        margin-top: 8em;
+        overflow-x: hidden;
+        scroll-snap-type: x mandatory;
+        border-radius: 1.5em;
+        box-shadow: 0 0 1em; }
+        .cont .estilosSlider .posiciónSlider .Slider img {
+          width: 100%;
+          object-fit: cover;
+          scroll-snap-align: center; }
+  .cont .estilosTarjC {
+    display: flex;
+    flex-direction: column;
+    margin: 2em .1em 35em 36em;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 0 0 1em;
+    background-color: #fcffff; }
+    .cont .estilosTarjC h5 {
+      display: flex; }
+    .cont .estilosTarjC .posicTarjC {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .cont .estilosTarjC .posicTarjC p {
+        font-size: 1.4em;
+        margin-bottom: 1em; }
 
 form {
   display: flex;
@@ -276,8 +311,3 @@ table {
     font-size: 1.5vw;
     font-weight: bold;
     margin: .5em; }
-
-h5 {
-  font-size: 1.5vw;
-  font-weight: bold;
-  margin: .5em 0 4em 5em; }

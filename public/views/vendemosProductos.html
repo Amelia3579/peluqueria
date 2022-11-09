@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peluquería</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
@@ -24,25 +25,26 @@
     </header>
 
     <main>
+        <!-- Formulario para loguearse -->
         <section>
-            <h4>Completá el formulario para empezar a comprar </h4>
-                <form id="form">
-                    <label for="username">Nombre:</label>
-                    <input type="text" name="username" id="username" autocomplete="off"
-                        placeholder="Este campo admite solo letras en minúsculas">
-                    <label for="password">Clave:</label>
-                    <input type="password" name="password" id="password" autocomplete="off"
-                        placeholder="Este campo admite solo caracteres numéricos">
-                    <label for="email">Correo Eléctronico:</label>
-                    <input type="email" name="email" id="email" autocomplete="off"
-                        placeholder="Formato de la dirección de mail: meli@yahoo.com.ar">
-                    <button class="btn--resetear" type="reset">RESETEAR DATOS</button><button id="envio" class="btn--enviar"
-                        type="submit">ENVIAR DATOS
-                    </button>
-                </form>
+            <h2>Completá el formulario para empezar a comprar </h2>
+            <form id="form">
+                <label for="username">Nombre:</label>
+                <input type="text" name="username" id="username" autocomplete="off"
+                    placeholder="Este campo admite solo letras en minúsculas">
+                <label for="password">Clave:</label>
+                <input type="password" name="password" id="password" autocomplete="off"
+                    placeholder="Este campo admite solo caracteres numéricos">
+                <label for="email">Correo Eléctronico:</label>
+                <input type="email" name="email" id="email" autocomplete="off"
+                    placeholder="Formato de la dirección de mail: meli@yahoo.com.ar">
+                <button class="btn--resetear" type="reset">RESETEAR DATOS</button><button id="envio" class="btn--enviar"
+                    type="submit">ENVIAR DATOS
+                </button>
+            </form>
         </section>
         <section id="misProd" class="contenedor"></section>
-
+        <!-- Tabla para insertar productos -->
         <table>
             <thead>
                 <caption>Tus Productos</caption>
@@ -55,7 +57,7 @@
 
             </tbody>
         </table>
-        <h5 id="totalCompra">Tu inversion total es: </h5>
+        <h3 id="totalCompra">Tu inversion total es: </h3>
     </main>
 
     <footer>
@@ -66,10 +68,12 @@
             <p>Llamanos al: 15234789</p>
         </div>
     </footer>
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- Mis scripts -->
+    <script defer src="../../productosStock.js"></script>
+    <script defer src="../../vendemosP.js"></script>
 
-    <script defer src="../../tiendaOnLine.js"></script>
-    <script defer src="../../script.js"></script>
-    
 </body>
 
 </html>

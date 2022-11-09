@@ -1,27 +1,54 @@
- .contenedor {
-     display: flex;
-     flex-direction: row;
+//Estilos Slider
+.cont {
+    display: flex;
 
-     .posiciónSlider {
-         display: flex;
-         justify-content: center;
+    .estilosSlider {
+        display: flex;
 
-         .Slider {
-             display: flex;
-             max-width: 500px;
-             height: 400px;
-             width: 100%;
-             margin-top: 2em;
-             overflow-x: hidden;
-             scroll-snap-type: x mandatory;
-             border-radius: 1.5em;
-             box-shadow: 0 0 1em;
+        .posiciónSlider {
+            display: flex;
+            justify-content: center;
 
-             img {
-                 width: 100%;
-                 object-fit: cover;
-                 scroll-snap-align: center;
+            .Slider {
+                display: flex;
+                max-width: 500px;
+                height: 400px;
+                width: 100%;
+                margin-top: 8em;
+                overflow-x: hidden;
+                scroll-snap-type: x mandatory;
+                border-radius: 1.5em;
+                box-shadow: 0 0 1em;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    scroll-snap-align: center;
+                }
+            }
+        }
+    }
+    //Estilos tarjeta que recibe info del clima
+    .estilosTarjC {
+        display: flex;
+        flex-direction: column;
+        margin: 2em .1em 35em 36em;
+        padding: 1em;
+        border-radius: 1em;
+        box-shadow: 0 0 1em;
+        background-color: #fcffff; 
+        
+        h5 {            
+            display: flex;          
+        }
+        .posicTarjC {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                font-size: 1.4em;
+                margin-bottom: 1em;                
              }
-         }
+          }
      }
  }

@@ -1,4 +1,3 @@
-
 //DOM, funciones y metodos
 const carroCompras = [];
 let totalCarroC;
@@ -16,7 +15,7 @@ function renderizarProds() {
                     </picture>
         
                     <div class="posicionTarjCont">
-                        <h2>${prod.nombre}</h2>
+                        <h5>${prod.nombre}</h5>
                         <p>${prod.codigo}</p>
                         <p>${prod.componentes}</p>
                         <p>$ ${prod.precio}</p>
@@ -44,6 +43,18 @@ function renderizarProds() {
         //evento para cada button
         document.getElementById(`bot${prod.codigo}`).addEventListener("click", function () {
             agregarCarrito(prod);
+        
+        //toast para el click de los botones de los productos    
+        Toastify({
+            text: "TU PRODUCTO SE AGREGO AL CARRITO",
+            duration: 2000,
+            gravity: "botton",
+            radius:"2em",
+            style: {
+            background: "rgb(251, 180, 154)",
+            color: "black"
+        }         
+        }).showToast();
         });
     });
 }
@@ -51,8 +62,7 @@ renderizarProds();
 
 function agregarCarrito(prodSelec) {
     carroCompras.push(prodSelec);
-    console.table(carroCompras);
-    alert("Producto: " + prodSelec.nombre + " fue agregado a tu carro");
+    console.table(carroCompras);   
     document.getElementById("tBody").innerHTML += `
         <tr>
             <td>${prodSelec.nombre}</td>
@@ -68,20 +78,19 @@ function agregarCarrito(prodSelec) {
 
 
 
-
 //Storage & JSON
-//Inputs HTML
+//Inputs HTML de referencia
 /* <input id="username" type="text">
    <input id="password" type="password">
    <input id="email" type="temail"> */
 
-function Cliente (nombre, clave, correo) {
+function Cliente(nombre, clave, correo) {
     this.nombre = nombre;
     this.clave = clave;
     this.correo = correo;
 }
 let clienteTienda;
- 
+
 //Tomando el formulario
 const formulario = document.getElementById("form");
 
@@ -97,30 +106,21 @@ formulario.addEventListener("submit", (e) => {
     document.getElementById("password").value;
     document.getElementById("email").value;
 
-    //Cargamos  los valores al objeto Cliente
-  const cliente1 = new Cliente("amelia", 1425, "meli_gallegos@yahoo.com.ar");
-  //Agregamos los datos en el Array:
-  console.log(cliente1)
+    //Cargando los valores al objeto Cliente
+    const cliente1 = new Cliente("amelia", 1425, "meli_gallegos@yahoo.com.ar");
+    console.log(cliente1)
 
-    //Guardamos los datos en el Storage:
+    //Guardando los datos en el Storage:
     localStorage.setItem("Cliente", JSON.stringify(cliente1));
 
     //Recuperando el nombre del localStorage, para validarlo con el formulario de loguin
     const cliente2 = JSON.parse(localStorage.getItem("Cliente"));
-    
-    
+
+
     if (cliente2) {
-    clienteTienda = cliente2
-    console.log(cliente2.nombre + " ya podés comprar");
+        clienteTienda = cliente2
+        console.log(cliente2.nombre + " ya podés comprar");
     } else {
-    console.log("Tenés que ingresar tus datos en el formulario")
+        console.log("Tenés que ingresar tus datos en el formulario")
     }
-})    
-  
-
-
-
-
-
-
-
+})
