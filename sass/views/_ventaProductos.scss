@@ -1,3 +1,4 @@
+//Estilos formulario
 form {
   display: flex;
   flex-direction: column;
@@ -22,7 +23,7 @@ label {
 }
 
 input {
-  margin: 0 1.5rem 0 3rem;  
+  margin: 0 1.5rem 0 3rem;
   width: 90%;
   height: 3.6rem;
   background-color: #89f5cf;
@@ -30,10 +31,11 @@ input {
   border-radius: .8em;
   font-size: 1.2vw;
   padding: .5em;
-  
+
   &:hover {
     background-color: #6abca0;
   }
+
   &:focus {
     background-color: #89f5cf;
   }
@@ -56,11 +58,12 @@ $color in $botones {
 
     &:hover {
       background-color: #275e4a;
-      color:#fcffff;
+      color: #fcffff;
     }
   }
 }
 
+//Estilos tarjetas
 .contenedor {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +78,7 @@ $color in $botones {
 
     .posicionTarj {
       display: flex;
-      align-items: center;      
+      align-items: center;
       margin: 0 2.3em;
       border-radius: 1.5em;
       min-width: 5px;
@@ -144,7 +147,24 @@ $color in $botones {
 }
 
 
+//Estilos botón finalizar
+#finalComp {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 3em 3em 3em 34em;
+  padding: .7em;
+  border: 1px solid #fcffff;
+  border-radius: .6em;
+  background-color: #fcffff;
+  box-shadow: 0px 1px 10px rgb(30, 30, 30);
 
+  &:hover {
+    box-shadow: 5px 5px 20px rgb(30, 30, 30);
+  }
+}
+
+//Estilos Tabla
 table {
   width: 80%;
   margin: 4em 12em;
@@ -152,7 +172,7 @@ table {
   border-collapse: separate;
   border-spacing: 20px;
   border-radius: 1.5em;
-  background-color:#eceeee;
+  background-color: #eceeee;
 
   th {
     font-size: 1.2vw;
@@ -175,5 +195,3 @@ table {
     margin: .5em;
   }
 }
-
-

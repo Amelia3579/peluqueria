@@ -6,33 +6,40 @@
         display: flex;
 
         .posiciónSlider {
-            display: flex;
-            justify-content: center;
-
+            width: 500px;
+            height: 380px;
+            margin: 70px 0 0 0;
+            overflow: hidden;
+            border-radius: 1.5em;
+           
             .Slider {
                 display: flex;
-                max-width: 500px;
-                height: 400px;
-                width: 100%;
-                margin-top: 8em;
-                overflow-x: hidden;
-                scroll-snap-type: x mandatory;
+                padding: 0;
+                width: 400%;
                 border-radius: 1.5em;
-                box-shadow: 0 0 1em;
+                
+                animation: moviendoSlider 16s infinite alternate ease-in-out;
+
+                li {
+                    list-style: none;
+                    width: 100%;
+                }
 
                 img {
                     width: 100%;
-                    object-fit: cover;
-                    scroll-snap-align: center;
+                    border-radius: 1.5em;
+                    box-shadow: 0 0 1em;
                 }
             }
         }
     }
+
     //Estilos tarjeta que recibe info del clima
     .estilosTarjC {
         display: flex;
         flex-direction: column;
-        margin: 2em .1em 35em 36em;
+        height: auto;
+        margin: 2em .1em 25em 36em;
         padding: 1em;
         border-radius: 1em;
         box-shadow: 0 0 1em;
@@ -50,5 +57,8 @@
                 margin-bottom: 1em;                
              }
           }
+          img {
+            border-radius: 1em;
+        }
      }
  }

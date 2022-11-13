@@ -29,21 +29,29 @@
         <section>
             <h2>Completá el formulario para empezar a comprar </h2>
             <form id="form">
-                <label for="username">Nombre:</label>
-                <input type="text" name="username" id="username" autocomplete="off"
-                    placeholder="Este campo admite solo letras en minúsculas">
-                <label for="password">Clave:</label>
-                <input type="password" name="password" id="password" autocomplete="off"
-                    placeholder="Este campo admite solo caracteres numéricos">
-                <label for="email">Correo Eléctronico:</label>
-                <input type="email" name="email" id="email" autocomplete="off"
-                    placeholder="Formato de la dirección de mail: meli@yahoo.com.ar">
+                <label for="username">Nombre (obligatorio)</label>
+                <input type="text" name="username" id="nombre" autocomplete="off" style="text-transform:lowercase;"
+                    value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
+                    placeholder="Solo letras en minúsculas">
+
+                <label for="password">Clave (obligatorio)</label>
+                <input type="password" minlength="6" name="password" id="clave" autocomplete="off"
+                    placeholder="clave con 6 caracteres como mínimo.">
+
+                <label for="email">Correo Eléctronico (obligatorio)</label>
+                <input type="email" name="email" id="email" autocomplete="off" style="text-transform:lowercase;"
+                    value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
+                    placeholder="formato aceptado: meli@ajals.com">
+
                 <button class="btn--resetear" type="reset">RESETEAR DATOS</button><button id="envio" class="btn--enviar"
                     type="submit">ENVIAR DATOS
                 </button>
             </form>
         </section>
+
+        <!-- Tarjetas cargadas desde DOM -->
         <section id="misProd" class="contenedor"></section>
+
         <!-- Tabla para insertar productos -->
         <table>
             <thead>
@@ -52,12 +60,15 @@
                 <th>CODIGO</th>
                 <th>COMPONENTES</th>
                 <th>PRECIO</th>
-            </thead>
+                </thead>
             <tbody id="tBody">
 
             </tbody>
         </table>
         <h3 id="totalCompra">Tu inversion total es: </h3>
+
+        <!-- Botón finalizar compra -->
+        <button type="button" id="finalComp">FINALIZAR</button>
     </main>
 
     <footer>

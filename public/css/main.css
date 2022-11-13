@@ -26,7 +26,7 @@ ul {
   list-style-type: none; }
 
 h1 {
-  font-size: 2.4em; }
+  font-size: 2.6em; }
 
 h2 {
   font-size: 2.2em;
@@ -130,26 +130,29 @@ footer {
   .cont .estilosSlider {
     display: flex; }
     .cont .estilosSlider .posiciónSlider {
-      display: flex;
-      justify-content: center; }
+      width: 500px;
+      height: 380px;
+      margin: 70px 0 0 0;
+      overflow: hidden;
+      border-radius: 1.5em; }
       .cont .estilosSlider .posiciónSlider .Slider {
         display: flex;
-        max-width: 500px;
-        height: 400px;
-        width: 100%;
-        margin-top: 8em;
-        overflow-x: hidden;
-        scroll-snap-type: x mandatory;
+        padding: 0;
+        width: 400%;
         border-radius: 1.5em;
-        box-shadow: 0 0 1em; }
+        animation: moviendoSlider 16s infinite alternate ease-in-out; }
+        .cont .estilosSlider .posiciónSlider .Slider li {
+          list-style: none;
+          width: 100%; }
         .cont .estilosSlider .posiciónSlider .Slider img {
           width: 100%;
-          object-fit: cover;
-          scroll-snap-align: center; }
+          border-radius: 1.5em;
+          box-shadow: 0 0 1em; }
   .cont .estilosTarjC {
     display: flex;
     flex-direction: column;
-    margin: 2em .1em 35em 36em;
+    height: auto;
+    margin: 2em .1em 25em 36em;
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0 0 1em;
@@ -163,6 +166,8 @@ footer {
       .cont .estilosTarjC .posicTarjC p {
         font-size: 1.4em;
         margin-bottom: 1em; }
+    .cont .estilosTarjC img {
+      border-radius: 1em; }
 
 form {
   display: flex;
@@ -287,6 +292,19 @@ input {
           background-color: #48c599;
           color: #fcffff;
           font-size: 1.5em; }
+
+#finalComp {
+  display: inline-block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: 3em 3em 3em 34em;
+  padding: .7em;
+  border: 1px solid #fcffff;
+  border-radius: .6em;
+  background-color: #fcffff;
+  box-shadow: 0px 1px 10px #1e1e1e; }
+  #finalComp:hover {
+    box-shadow: 5px 5px 20px #1e1e1e; }
 
 table {
   width: 80%;
