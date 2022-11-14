@@ -1,6 +1,14 @@
 @charset "UTF-8";
 /*Imports*/
 /*MISC*/
+:root {
+  --primary: #89f5cf;
+  --secondary: #fbb49a;
+  --tertiary: #ffffff;
+  --quaternay: #1e1e1e;
+  --text-lg: 2em;
+  --text-md: 1.6em; }
+
 /*Reseteo*/
 * {
   margin: 0;
@@ -11,19 +19,24 @@
 html {
   font-size: 62.5%;
   font-family: Arial, Helvetica, sans-serif;
+  color: var(--quaternary);
   height: 100%; }
 
 body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #89f5cf; }
+  background-color: var(--primary); }
 
 a {
-  text-decoration: solid; }
+  text-decoration: solid;
+  display: inline-block; }
 
 ul {
   list-style-type: none; }
+
+li {
+  list-style: none; }
 
 h1 {
   font-size: 2.6em; }
@@ -46,6 +59,18 @@ h5 {
   font-size: 1.7em;
   font-weight: bold;
   margin-bottom: 1em; }
+
+/*Helpers*/
+.flex-row {
+  display: flex; }
+
+.flex-column {
+  display: flex;
+  flex-direction: column; }
+
+.container {
+  max-width: 1080px;
+  margin: 0 auto; }
 
 @keyframes pelosLocos {
   from {
@@ -71,58 +96,68 @@ h5 {
     width: 100%; } }
 
 /*PARTIALS*/
-.navbar {
-  display: flex;
+header {
+  background-color: var(--secondary); }
+
+.nav {
+  justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  height: 13vh;
-  background-color: #fbb49a; }
-  .navbarLogo {
-    justify-content: flex-start; }
-    .navbarLogo .LogoImg {
-      margin: 2em 80em 2em 6em; }
-  .navbarListaInd {
-    display: flex;
-    gap: 3em;
-    margin-left: 80em; }
-    .navbarListaInd a {
-      color: #1e1e1e;
-      font-size: 2em; }
-  .navbarLista {
-    display: flex;
-    gap: 3em; }
-    .navbarLista a {
-      color: #1e1e1e;
-      font-size: 2em; }
+  min-height: 13vh;
+  padding: 0 2rem; }
+  .navLogo {
+    justify-content: flex-start;
+    flex-basis: 30%; }
+  .navListaInd {
+    justify-content: space-between;
+    flex-basis: 40%;
+    margin-left: 89rem; }
+    .navListaInd a {
+      color: var(--quaternary);
+      font-size: 2em;
+      padding: 1rem; }
+  .navLista {
+    justify-content: space-between;
+    flex-basis: 40%; }
+    .navLista a {
+      color: var(--quaternary);
+      font-size: 2em;
+      padding: 1rem; }
+  .navListaItems {
+    border: 2px solid var(--secondary);
+    transition: border-color .3s ease-in-out; }
+  .nav .nav.navListaInd.navListaItems:hover {
+    border-color: var(--quaternary); }
 
 footer {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #fbb49a;
+  background-color: var(--secondary);
   height: 13vh;
   width: 100%;
   margin-top: auto;
   font-size: 2.3em;
-  padding: 2em 7em; }
+  padding: 2rem 7rem; }
 
 /*VIEWS*/
 .Inicio {
   display: flex;
   overflow: hidden;
-  margin: 8em 0 18.3em 0; }
+  margin: 8rem 0 18.3rem 0; }
   .InicioPict {
     justify-content: flex-start;
     align-items: flex-start;
-    margin: 2.5em 4em; }
+    margin: 2.5rem 4rem; }
     .InicioPict .PictImg {
-      border-radius: 1.5em;
-      box-shadow: 0 0 1em; }
+      border-radius: 1.5rem;
+      box-shadow: 0 0 1rem; }
   .InicioTítulo p {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 10em;
-    margin-top: .5em;
+    margin-top: .5rem;
     animation: 5s infinite alternate pelosLocos; }
 
 .cont {
@@ -132,30 +167,29 @@ footer {
     .cont .estilosSlider .posiciónSlider {
       width: 500px;
       height: 380px;
-      margin: 70px 0 0 0;
+      margin: 10rem 0 0 0;
       overflow: hidden;
-      border-radius: 1.5em; }
+      border-radius: 1.5rem; }
       .cont .estilosSlider .posiciónSlider .Slider {
         display: flex;
         padding: 0;
         width: 400%;
-        border-radius: 1.5em;
+        border-radius: 1.5rem;
         animation: moviendoSlider 16s infinite alternate ease-in-out; }
         .cont .estilosSlider .posiciónSlider .Slider li {
-          list-style: none;
           width: 100%; }
         .cont .estilosSlider .posiciónSlider .Slider img {
           width: 100%;
-          border-radius: 1.5em;
-          box-shadow: 0 0 1em; }
+          border-radius: 1.5rem;
+          box-shadow: 0 0 1rem; }
   .cont .estilosTarjC {
     display: flex;
     flex-direction: column;
     height: auto;
-    margin: 2em .1em 25em 36em;
-    padding: 1em;
-    border-radius: 1em;
-    box-shadow: 0 0 1em;
+    margin: 2rem .1rem 25rem 36rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem;
     background-color: #fcffff; }
     .cont .estilosTarjC h5 {
       display: flex; }
@@ -165,9 +199,9 @@ footer {
       align-items: center; }
       .cont .estilosTarjC .posicTarjC p {
         font-size: 1.4em;
-        margin-bottom: 1em; }
+        margin-bottom: 1rem; }
     .cont .estilosTarjC img {
-      border-radius: 1em; }
+      border-radius: 1rem; }
 
 form {
   display: flex;
@@ -175,7 +209,7 @@ form {
   align-content: center;
   width: 40%;
   margin: 0 45rem;
-  background-color: #fcffff;
+  background-color: var(--tertiary);
   border-radius: 1.5em;
   box-shadow: 0px 1px 10px #1e1e1e; }
   form:hover {
@@ -186,17 +220,17 @@ label {
   margin: 0 3rem;
   padding: .3rem;
   font-size: 1.8em;
-  margin-top: .8em; }
+  margin-top: .8rem; }
 
 input {
   margin: 0 1.5rem 0 3rem;
   width: 90%;
   height: 3.6rem;
-  background-color: #89f5cf;
-  border: 1px solid #fcffff;
-  border-radius: .8em;
-  font-size: 1.2vw;
-  padding: .5em; }
+  background-color: var(--primary);
+  border: 1px solid var(--tertiary);
+  border-radius: .8rem;
+  font-size: 1.3em;
+  padding: .5rem; }
   input:hover {
     background-color: #6abca0; }
   input:focus {
@@ -206,27 +240,27 @@ input {
   background-color: #6abca0;
   font-size: 1.5em;
   font-weight: bold;
-  padding: .5em;
+  padding: .9rem;
   margin: .8rem 3rem;
   width: 90%;
-  border: 1px solid #fcffff;
+  border: 1px solid var(--tertiary);
   border-radius: 1.5rem; }
   .btn--resetear:hover {
     background-color: #275e4a;
-    color: #fcffff; }
+    color: var(--tertiary); }
 
 .btn--enviar {
   background-color: #368166;
   font-size: 1.5em;
   font-weight: bold;
-  padding: .5em;
+  padding: .9rem;
   margin: .8rem 3rem;
   width: 90%;
-  border: 1px solid #fcffff;
+  border: 1px solid var(--tertiary);
   border-radius: 1.5rem; }
   .btn--enviar:hover {
     background-color: #275e4a;
-    color: #fcffff; }
+    color: var(--tertiary); }
 
 .contenedor {
   display: flex;
@@ -237,16 +271,16 @@ input {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    margin: 10em 1em 3em 0; }
+    margin: 10rem 1rem 3rem 0; }
     .contenedor .contenedorPosicion .posicionTarj {
       display: flex;
       align-items: center;
-      margin: 0 2.3em;
-      border-radius: 1.5em;
+      margin: 0 2.3rem;
+      border-radius: 1.5rem;
       min-width: 5px;
       max-width: 1080px;
       box-shadow: 0px 1px 10px #1e1e1e;
-      background-color: #fcffff;
+      background-color: var(--tertiary);
       cursor: default;
       transition: all 400ms ease; }
       .contenedor .contenedorPosicion .posicionTarj:hover {
@@ -256,76 +290,76 @@ input {
         justify-content: center;
         align-items: center;
         width: 50%;
-        margin: 4em;
-        border-radius: 1.5em;
+        margin: 4rem;
+        border-radius: 1.5rem;
         box-shadow: 0px 1px 10px #1e1e1e;
         overflow: hidden;
-        background-color: #fcffff; }
+        background-color: var(--tertiary); }
       .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont {
         width: 50%;
         text-align: left;
-        padding-right: 1em; }
+        padding-right: 1rem; }
         .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont h2 {
           font-size: 1.8em;
-          margin-bottom: 1em; }
+          margin-bottom: 1rem; }
         .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont p {
           font-size: 1.5em;
           line-height: 1.1em;
-          margin: .8em 0 1.1em 0; }
+          margin: .8rem 0 1.1rem 0; }
         .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont .estilosBtn {
           display: inline-block;
-          padding: .4em;
-          margin: .3em .3em .3em 0;
+          padding: .4rem;
+          margin: .3rem .3rem .3rem 0;
           border: 2px solid #5fb395;
-          border-radius: .8em;
+          border-radius: .8rem;
           font-weight: bold;
           background-color: #89f5cf;
-          color: #1e1e1e;
+          color: var(--tertiary);
           font-size: 1.5em; }
         .contenedor .contenedorPosicion .posicionTarj .posicionTarjCont .estilosSobreBtn {
           display: inline-block;
-          padding: .4em;
-          margin: .3em .3em .3em 0;
+          padding: .4rem;
+          margin: .3rem .3rem .3rem 0;
           border: 2px solid #5fb395;
-          border-radius: .8em;
+          border-radius: .8rem;
           font-weight: bold;
           background-color: #48c599;
-          color: #fcffff;
+          color: var(--tertiary);
           font-size: 1.5em; }
 
 #finalComp {
   display: inline-block;
   font-size: 2em;
   font-weight: bold;
-  margin: 3em 3em 3em 34em;
-  padding: .7em;
-  border: 1px solid #fcffff;
-  border-radius: .6em;
-  background-color: #fcffff;
+  margin: 3rem 3rem 3rem 34rem;
+  padding: .7rem;
+  border: 1px solid var(--tertiary);
+  border-radius: .6rem;
+  background-color: var(--tertiary);
   box-shadow: 0px 1px 10px #1e1e1e; }
   #finalComp:hover {
     box-shadow: 5px 5px 20px #1e1e1e; }
 
 table {
   width: 80%;
-  margin: 4em 12em;
+  margin: 4rem 12rem;
   text-align: center;
   border-collapse: separate;
   border-spacing: 20px;
-  border-radius: 1.5em;
-  background-color: #eceeee; }
+  border-radius: 1.5rem;
+  background-color: var(--tertiary); }
   table th {
-    font-size: 1.2vw;
+    font-size: 1.2em;
     font-weight: bold;
-    padding: .8em;
-    border-radius: .8em;
-    background-color: #89f5cf; }
+    padding: .8rem;
+    border-radius: .8rem;
+    background-color: var(--primary); }
   table td {
-    font-size: 1.3vw;
-    padding: .5em;
-    background-color: #89f5cf;
-    border-radius: .8em; }
+    font-size: 1.3em;
+    padding: .5rem;
+    background-color: var(--primary);
+    border-radius: .8rem; }
   table caption {
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-weight: bold;
-    margin: .5em; }
+    margin: .5rem; }

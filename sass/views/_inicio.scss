@@ -1,16 +1,16 @@
 .Inicio {
     display: flex;
     overflow: hidden;
-    margin: 8em 0 18.3em 0;
+    margin: 8rem 0 18.3rem 0;
 
     &Pict {
         justify-content: flex-start;
         align-items: flex-start;
-        margin: 2.5em 4em;
+        margin: 2.5rem 4rem;
 
         .PictImg {
-            border-radius: 1.5em;
-            box-shadow: 0 0 1em;
+            border-radius: 1.5rem;
+            box-shadow: 0 0 1rem;
         }
     }
 
@@ -21,7 +21,7 @@
             justify-content: center;
             align-items: center;
             font-size: 10em;
-            margin-top: .5em;
+            margin-top: .5rem;
             animation: 5s infinite alternate pelosLocos;
         }
     }

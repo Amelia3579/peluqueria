@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peluquería</title>
+    <title>Tienda de Belleza</title>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <picture class="navbarLogo">
+        <nav class="nav flex-row">
+            <picture class="navLogo">
                 <a href="nuestrosTrabajos.html"><img class="LogoImg" src="../img/logo.png" alt="Cabeza con flores"></a>
             </picture>
-            <ul class="navbarLista">
-                <li><a href="/index.html">Inicio</a></li>
-                <li><a href="./nuestrosTrabajos.html">Nuestros Trabajos</a></li>
-                <li><a href="./vendemosProductos.html">Vendemos Productos</a></li>
+            <ul class="navLista flex-row">
+                <li class="navListaItems"><a href="/index.html">Inicio</a></li>
+                <li class="navListaItems"><a href="./nuestrosTrabajos.html">Nuestros Trabajos</a></li>
+                <li class="navListaItems"><a href="./vendemosProductos.html">Vendemos Productos</a></li>
             </ul>
         </nav>
     </header>
@@ -32,20 +32,20 @@
                 <label for="username">Nombre (obligatorio)</label>
                 <input type="text" name="username" id="nombre" autocomplete="off" style="text-transform:lowercase;"
                     value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
-                    placeholder="Solo letras en minúsculas">
+                    placeholder="Solo letras en minúsculas" required>
 
                 <label for="password">Clave (obligatorio)</label>
                 <input type="password" minlength="6" name="password" id="clave" autocomplete="off"
-                    placeholder="clave con 6 caracteres como mínimo.">
+                    placeholder="clave con 6 caracteres como mínimo." required>
 
                 <label for="email">Correo Eléctronico (obligatorio)</label>
                 <input type="email" name="email" id="email" autocomplete="off" style="text-transform:lowercase;"
                     value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
-                    placeholder="formato aceptado: meli@ajals.com">
+                    placeholder="formato aceptado: meli@ajals.com" required>
 
-                <button class="btn--resetear" type="reset">RESETEAR DATOS</button><button id="envio" class="btn--enviar"
-                    type="submit">ENVIAR DATOS
-                </button>
+                <button id="btnReset" class="btn--resetear" type="reset">RESETEAR DATOS</button>
+                <button id="envio" class="btn--enviar"
+                    type="submit">ENVIAR DATOS</button>
             </form>
         </section>
 

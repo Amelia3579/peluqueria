@@ -1,4 +1,4 @@
-@mixin lista_header ($color: black, $font: 1.5em) {
+@mixin lista_header ($color: var(--quaternary), $font: 1.5em) {
     color: $color;
     font-size: $font;
 }

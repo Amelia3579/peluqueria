@@ -124,7 +124,6 @@ let user = document.getElementById("nombre");
 let pass = document.getElementById("clave");
 let correo = document.getElementById("email");
 
-
 //Validación campo user para que se ingrese solo letras en minúsculas
 user.oninput = () => {
     const recibeNum = /\d/;
@@ -152,6 +151,18 @@ correo.onchange = () => {
         console.log("Revise su dirección de correo")
     }
 };
+
+//Botón resetear 
+const reseteo = document.getElementById("btnReset");
+
+document.addEventListener("click",function(){
+    reseteo.addEventListener("reset", function(){
+        pass.style.color ="black";
+        reseteo.reset();
+        });
+})
+
+
 //La 1° validación del botón enviar datos se realiza con el atributo "required" en el HTML
 
 

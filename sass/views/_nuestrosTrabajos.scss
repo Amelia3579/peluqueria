@@ -8,27 +8,26 @@
         .posiciónSlider {
             width: 500px;
             height: 380px;
-            margin: 70px 0 0 0;
+            margin: 10rem 0 0 0;
             overflow: hidden;
-            border-radius: 1.5em;
+            border-radius: 1.5rem;
            
             .Slider {
                 display: flex;
                 padding: 0;
                 width: 400%;
-                border-radius: 1.5em;
+                border-radius: 1.5rem;
                 
                 animation: moviendoSlider 16s infinite alternate ease-in-out;
 
                 li {
-                    list-style: none;
                     width: 100%;
                 }
 
                 img {
                     width: 100%;
-                    border-radius: 1.5em;
-                    box-shadow: 0 0 1em;
+                    border-radius: 1.5rem;
+                    box-shadow: 0 0 1rem;
                 }
             }
         }
@@ -39,10 +38,10 @@
         display: flex;
         flex-direction: column;
         height: auto;
-        margin: 2em .1em 25em 36em;
-        padding: 1em;
-        border-radius: 1em;
-        box-shadow: 0 0 1em;
+        margin: 2rem .1rem 25rem 36rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        box-shadow: 0 0 1rem;
         background-color: #fcffff; 
         
         h5 {            
@@ -54,11 +53,11 @@
             align-items: center;
             p{
                 font-size: 1.4em;
-                margin-bottom: 1em;                
+                margin-bottom: 1rem;                
              }
           }
           img {
-            border-radius: 1em;
+            border-radius: 1rem;
         }
      }
  }

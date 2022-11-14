@@ -1,34 +1,46 @@
-.navbar {
-    display: flex;
+header {
+    background-color: var(--secondary);
+}
+
+.nav {
+    justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
-    height: 13vh;
-    background-color: rgb(251, 180, 154);
+    min-height: 13vh;
+    padding: 0 2rem;
 
     &Logo {
         justify-content: flex-start;
-
-        .LogoImg {
-            margin: 2em 80em 2em 6em;
-        }
+        flex-basis: 30%;
     }
 
     &ListaInd {
-        display: flex;
-        gap: 3em;
-        margin-left: 80em;
+        justify-content: space-between;
+        flex-basis: 40%;
+        margin-left: 89rem;
 
         a {
-            @include lista_header (rgb(30, 30, 30), 2em);
+            @include lista_header (var(--quaternary), 2em);
+            padding: 1rem;
         }
     }
 
     &Lista {
-        display: flex;
-        gap: 3em;
+        justify-content: space-between;
+        flex-basis: 40%;
 
         a {
-            @include lista_header (rgb(30, 30, 30), 2em);
+            @include lista_header (var(--quaternary), 2em);
+            padding: 1rem;
         }
     }
 
+    &ListaItems {
+        border: 2px solid var(--secondary);
+        transition: border-color .3s ease-in-out;
+    }
+
+    .nav.navListaInd.navListaItems:hover {
+        border-color: var(--quaternary);
+    }
 }

@@ -5,7 +5,7 @@ form {
   align-content: center;
   width: 40%;
   margin: 0 45rem;
-  background-color: #fcffff;
+  background-color: var(--tertiary);
   border-radius: 1.5em;
   box-shadow: 0px 1px 10px rgb(30, 30, 30);
 
@@ -19,18 +19,18 @@ label {
   margin: 0 3rem;
   padding: .3rem;
   font-size: 1.8em;
-  margin-top: .8em;
+  margin-top: .8rem;
 }
 
 input {
   margin: 0 1.5rem 0 3rem;
   width: 90%;
   height: 3.6rem;
-  background-color: #89f5cf;
-  border: 1px solid #fcffff;
-  border-radius: .8em;
-  font-size: 1.2vw;
-  padding: .5em;
+  background-color: var(--primary);
+  border: 1px solid var(--tertiary);
+  border-radius: .8rem;
+  font-size: 1.3em;
+  padding: .5rem;
 
   &:hover {
     background-color: #6abca0;
@@ -50,15 +50,15 @@ $color in $botones {
     background-color: $color;
     font-size: 1.5em;
     font-weight: bold;
-    padding: .5em;
+    padding: .9rem;
     margin: .8rem 3rem;
     width: 90%;
-    border: 1px solid #fcffff;
+    border: 1px solid var(--tertiary);
     border-radius: 1.5rem;
 
     &:hover {
       background-color: #275e4a;
-      color: #fcffff;
+      color: var(--tertiary);
     }
   }
 }
@@ -74,17 +74,17 @@ $color in $botones {
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%;
-    margin: 10em 1em 3em 0;
+    margin: 10rem 1rem 3rem 0;
 
     .posicionTarj {
       display: flex;
       align-items: center;
-      margin: 0 2.3em;
-      border-radius: 1.5em;
+      margin: 0 2.3rem;
+      border-radius: 1.5rem;
       min-width: 5px;
       max-width: 1080px;
       box-shadow: 0px 1px 10px rgb(30, 30, 30);
-      background-color: #fcffff;
+      background-color: var(--tertiary);
       cursor: default;
       transition: all 400ms ease;
 
@@ -97,49 +97,49 @@ $color in $botones {
         justify-content: center;
         align-items: center;
         width: 50%;
-        margin: 4em;
-        border-radius: 1.5em;
+        margin: 4rem;
+        border-radius: 1.5rem;
         box-shadow: 0px 1px 10px rgb(30, 30, 30);
         overflow: hidden;
-        background-color: #fcffff;
+        background-color: var(--tertiary);
       }
 
       .posicionTarjCont {
         width: 50%;
         text-align: left;
-        padding-right: 1em;
+        padding-right: 1rem;
 
         h2 {
           font-size: 1.8em;
-          margin-bottom: 1em;
+          margin-bottom: 1rem;
         }
 
         p {
           font-size: 1.5em;
           line-height: 1.1em;
-          margin: .8em 0 1.1em 0;
+          margin: .8rem 0 1.1rem 0;
         }
 
         .estilosBtn {
           display: inline-block;
-          padding: .4em;
-          margin: .3em .3em .3em 0;
+          padding: .4rem;
+          margin: .3rem .3rem .3rem 0;
           border: 2px solid #5fb395;
-          border-radius: .8em;
+          border-radius: .8rem;
           font-weight: bold;
           background-color: #89f5cf;
-          @include lista_header (rgb(30, 30, 30), 1.5em);
+          @include lista_header (var(--tertiary), 1.5em);
         }
 
         .estilosSobreBtn {
           display: inline-block;
-          padding: .4em;
-          margin: .3em .3em .3em 0;
+          padding: .4rem;
+          margin: .3rem .3rem .3rem 0;
           border: 2px solid #5fb395;
-          border-radius: .8em;
+          border-radius: .8rem;
           font-weight: bold;
           background-color: #48c599;
-          @include lista_header (#fcffff, 1.5em);
+          @include lista_header (var(--tertiary), 1.5em);
         }
       }
     }
@@ -152,11 +152,11 @@ $color in $botones {
   display: inline-block;
   font-size: 2em;
   font-weight: bold;
-  margin: 3em 3em 3em 34em;
-  padding: .7em;
-  border: 1px solid #fcffff;
-  border-radius: .6em;
-  background-color: #fcffff;
+  margin: 3rem 3rem 3rem 34rem;
+  padding: .7rem;
+  border: 1px solid var(--tertiary);
+  border-radius: .6rem;
+  background-color: var(--tertiary);
   box-shadow: 0px 1px 10px rgb(30, 30, 30);
 
   &:hover {
@@ -167,31 +167,31 @@ $color in $botones {
 //Estilos Tabla
 table {
   width: 80%;
-  margin: 4em 12em;
+  margin: 4rem 12rem;
   text-align: center;
   border-collapse: separate;
   border-spacing: 20px;
-  border-radius: 1.5em;
-  background-color: #eceeee;
+  border-radius: 1.5rem;
+  background-color: var(--tertiary);
 
   th {
-    font-size: 1.2vw;
+    font-size: 1.2em;
     font-weight: bold;
-    padding: .8em;
-    border-radius: .8em;
-    background-color: #89f5cf;
+    padding: .8rem;
+    border-radius: .8rem;
+    background-color: var(--primary);
   }
 
   td {
-    font-size: 1.3vw;
-    padding: .5em;
-    background-color: #89f5cf;
-    border-radius: .8em;
+    font-size: 1.3em;
+    padding: .5rem;
+    background-color: var(--primary);
+    border-radius: .8rem;
   }
 
   caption {
-    font-size: 1.5vw;
+    font-size: 1.5em;
     font-weight: bold;
-    margin: .5em;
+    margin: .5rem;
   }
 }
