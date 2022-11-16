@@ -1,48 +1,52 @@
 @keyframes pelosLocos {
-    from {
-        margin-right: 100%;
-        width: 150%;
-      }
-    
-      75% {
-        font-size: 300%;
-        width: 130%;
-        margin-right: 50%;
-      }
-    
-      to {
-        margin-right: 100%;
-        width: 100%;
-      }
-    
-}
-
-@keyframes movimiento {
   from {
-    margin-left: -100%;
-    width: 300%;
+    margin-right: 100%;
+    width: 150%;
   }
 
-  //   25% {
-  //   margin-left: 75%; 
-  //   width: 25%;
-  //   }
-
-  //  50% {
-  //    margin-left: 50%; 
-  //    width: 50%;
-  //  }
-
-   75% {
-     margin-left: 75%; 
-     width: 150%;
-   }
-
+  75% {
+    font-size: 300%;
+    width: 130%;
+    margin-right: 50%;
+  }
 
   to {
-    margin-left: 0%;
+    margin-right: 100%;
     width: 100%;
   }
+
 }
 
+@keyframes moviendoSlider {
+  0% {
+    margin-left: 0%;
+  }
 
+  20% {
+    margin-left: 0%;
+  }
+
+  25% {
+    margin-left: -100%;
+  }
+
+  45% {
+    margin-left: -100%;
+  }
+
+  50% {
+    margin-left: -200%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+
+  75% {
+    margin-left: -300%;
+  }
+
+  95% {
+    margin-left: -300%;
+  }
+}

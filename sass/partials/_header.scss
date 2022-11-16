@@ -1,5 +1,6 @@
 header {
     background-color: var(--secondary);
+    width: 100%;
 }
 
 .nav {
@@ -7,22 +8,12 @@ header {
     flex-wrap: wrap;
     align-items: center;
     min-height: 13vh;
+    height: 100%;
     padding: 0 2rem;
 
     &Logo {
         justify-content: flex-start;
         flex-basis: 30%;
-    }
-
-    &ListaInd {
-        justify-content: space-between;
-        flex-basis: 40%;
-        margin-left: 89rem;
-
-        a {
-            @include lista_header (var(--quaternary), 2em);
-            padding: 1rem;
-        }
     }
 
     &Lista {
@@ -36,11 +27,36 @@ header {
     }
 
     &ListaItems {
-        border: 2px solid var(--secondary);
+        border: 3px solid var(--secondary);
         transition: border-color .3s ease-in-out;
-    }
 
-    .nav.navListaInd.navListaItems:hover {
-        border-color: var(--quaternary);
+        &:hover {
+            border-color: var(--quaternary);
+        }
+    }
+}
+
+@media (max-width:320px) {
+    header {
+        height: 100%;
+    }
+    .nav {
+        margin: 1.5rem 0;
+
+        &Lista {
+            a {
+                font-size: 1.3em;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .nav {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        font-size: 1.5em;
     }
 }

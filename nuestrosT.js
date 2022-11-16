@@ -36,7 +36,7 @@ function datosUrl() {
 
                 //Ternario para mostrar un texto o el otro, dentro del párrafo creado
                 datos.temp > 20 ? imgClima.setAttribute("src", "../../public/img/diaSoleado.jpg") && imgClima.setAttribute("alt", "mujer en una dia soleado") :
-                    imgClima.setAttribute("src", "../../public/img/diaFrioLluvioso") && setAttribute("alt", "mujer en un dia frio y lluvioso")
+                    imgClima.setAttribute("src", "../../public/img/diaFrioLluvioso.jpg") && setAttribute("alt", "mujer en un dia frio y lluvioso")
 
                 articleClima.appendChild(imgClima);
             }

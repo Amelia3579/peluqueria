@@ -14,7 +14,7 @@
     <header>
         <nav class="nav flex-row">
             <picture class="navLogo">
-                <a href="nuestrosTrabajos.html"><img class="LogoImg" src="../img/logo.png" alt="Cabeza con flores"></a>
+                <a href="/index.html"><img class="LogoImg" src="../img/logo.png" alt="Cabeza con flores"></a>
             </picture>
             <ul class="navLista flex-row">
                 <li class="navListaItems"><a href="/index.html">Inicio</a></li>
@@ -26,31 +26,35 @@
 
     <main>
         <!-- Formulario para loguearse -->
-        <section>
-            <h2>Completá el formulario para empezar a comprar </h2>
-            <form id="form">
-                <label for="username">Nombre (obligatorio)</label>
-                <input type="text" name="username" id="nombre" autocomplete="off" style="text-transform:lowercase;"
-                    value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
-                    placeholder="Solo letras en minúsculas" required>
+        <div class="contFondo">
+            <section class="fondo">
+                <article class="posicionFondo">
+                    <h2>Registrate para comprar</h2>
+                    <form id="form" class="flex-column">
+                        <label for="username">Nombre (obligatorio)</label>
+                        <input type="text" name="username" id="nombre" autocomplete="off"
+                            style="text-transform:lowercase;" value=""
+                            onkeyup="javascript:this.value=this.value.toLowerCase();"
+                            placeholder="Solo letras en minúsculas" required>
 
-                <label for="password">Clave (obligatorio)</label>
-                <input type="password" minlength="6" name="password" id="clave" autocomplete="off"
-                    placeholder="clave con 6 caracteres como mínimo." required>
+                        <label for="password">Clave (obligatorio)</label>
+                        <input type="password" minlength="6" name="password" id="clave" autocomplete="off"
+                            placeholder="6 números como mínimo." required>
 
-                <label for="email">Correo Eléctronico (obligatorio)</label>
-                <input type="email" name="email" id="email" autocomplete="off" style="text-transform:lowercase;"
-                    value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
-                    placeholder="formato aceptado: meli@ajals.com" required>
+                        <label for="email">Correo (obligatorio)</label>
+                        <input type="email" name="email" id="email" autocomplete="off" style="text-transform:lowercase;"
+                            value="" onkeyup="javascript:this.value=this.value.toLowerCase();"
+                            placeholder="pedro@gmail.com" required>
 
-                <button id="btnReset" class="btn--resetear" type="reset">RESETEAR DATOS</button>
-                <button id="envio" class="btn--enviar"
-                    type="submit">ENVIAR DATOS</button>
-            </form>
-        </section>
+                        <button id="btnReset" class="btn--resetear" type="reset">RESETEAR DATOS</button>
+                        <button id="envio" class="btn--enviar" type="submit">ENVIAR DATOS</button>
+                    </form>
+                </article>
+            </section>
 
-        <!-- Tarjetas cargadas desde DOM -->
-        <section id="misProd" class="contenedor"></section>
+            <!-- Tarjetas cargadas desde DOM -->
+            <section id="misProd" class="cont"></section>
+        </div>
 
         <!-- Tabla para insertar productos -->
         <table>
@@ -58,9 +62,9 @@
                 <caption>Tus Productos</caption>
                 <th>NOMBRE</th>
                 <th>CODIGO</th>
-                <th>COMPONENTES</th>
+                <th>DETALLES</th>
                 <th>PRECIO</th>
-                </thead>
+            </thead>
             <tbody id="tBody">
 
             </tbody>
@@ -69,15 +73,16 @@
 
         <!-- Botón finalizar compra -->
         <button type="button" id="finalComp">FINALIZAR</button>
+
     </main>
 
-    <footer>
+    <footer class="flex-row">
         <div>
             <p>Visitanos en: Aconcagua 123</p>
         </div>
         <div>
             <p>Llamanos al: 15234789</p>
-        </div>
+        </div> 
     </footer>
     <!-- Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

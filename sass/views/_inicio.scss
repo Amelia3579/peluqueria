@@ -1,28 +1,79 @@
-.Inicio {
+.inicio {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     overflow: hidden;
-    margin: 8rem 0 18.3rem 0;
+    margin: 12rem;
 
     &Pict {
-        justify-content: flex-start;
-        align-items: flex-start;
-        margin: 2.5rem 4rem;
+        margin: 2.5rem;
 
         .PictImg {
+            max-width: 100%;
+            width: auto;
+            height: auto;
             border-radius: 1.5rem;
             box-shadow: 0 0 1rem;
         }
     }
 
     &Título {
-
+    
         p {
             display: flex;
-            justify-content: center;
+            justify-content: left;
             align-items: center;
-            font-size: 10em;
-            margin-top: .5rem;
-            animation: 5s infinite alternate pelosLocos;
+            font-size: 5em;
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media (max-width:320px) {
+    .inicio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 13rem 0;
+        font-size: .6em;
+
+        &Pict {
+            padding: 2rem;
+        }
+
+        &Título {
+            justify-content: center;
+
+            p {
+                margin-top: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .inicio {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 17rem 0;
+
+
+        &Título {
+            justify-content: center;
+
+            h1 {
+                font-size: 3.5em;
+                margin-top: 2rem;
+            }
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 5em;
+                margin-top: 2rem;
+            }
         }
     }
 }

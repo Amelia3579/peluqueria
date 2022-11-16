@@ -1,23 +1,27 @@
 //Estilos Slider
-.cont {
-    display: flex;
+.flex-row {
+    justify-content: space-around;
 
     .estilosSlider {
-        display: flex;
-
+        margin: 7rem 0;
+        background-color: var(--primary);
+        border-radius: 1.5em;
+        box-shadow: 0px 1px 10px rgb(30, 30, 30);
+        
         .posiciónSlider {
-            width: 500px;
-            height: 380px;
-            margin: 10rem 0 0 0;
+            width: 37.5vw;
+            height: 60vh;
+            justify-content: center;
             overflow: hidden;
             border-radius: 1.5rem;
-           
+            margin: 2.5rem;
+            
+
             .Slider {
-                display: flex;
                 padding: 0;
                 width: 400%;
                 border-radius: 1.5rem;
-                
+
                 animation: moviendoSlider 16s infinite alternate ease-in-out;
 
                 li {
@@ -35,29 +39,78 @@
 
     //Estilos tarjeta que recibe info del clima
     .estilosTarjC {
-        display: flex;
-        flex-direction: column;
-        height: auto;
-        margin: 2rem .1rem 25rem 36rem;
+        width: 8vw;
+        height: 28vh;
+        margin: 8rem 0;
         padding: 1rem;
         border-radius: 1rem;
         box-shadow: 0 0 1rem;
-        background-color: #fcffff; 
-        
-        h5 {            
-            display: flex;          
-        }
+        background-color: #fcffff;
+
         .posicTarjC {
-            display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            p{
-                font-size: 1.4em;
-                margin-bottom: 1rem;                
-             }
-          }
-          img {
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.4em;
+        }
+
+        img {
+            margin-top: 1rem;
             border-radius: 1rem;
         }
-     }
- }
+    }
+}
+
+@media (max-width:320px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        font-size: 1.7em;
+
+        .estilosSlider {
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .posiciónSlider {
+            width: 90vw !important;
+            height: 20vh !important;
+        }
+
+        .estilosTarjC {
+
+            img {
+                height: 15vh;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+        font-size: 2em;
+
+        .posiciónSlider {
+            width: 90vw !important;
+            height: 50vh !important;
+        }
+
+        .estilosTarjC {
+
+            img {
+                width: 25vw;
+                height: 13vh;
+            }
+        }
+    }
+}            

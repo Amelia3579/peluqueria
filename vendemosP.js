@@ -9,7 +9,7 @@ let conten = document.getElementById("misProd");
 function renderizarProds() {
     for (const prod of producto) {
         conten.innerHTML += ` 
-            <div class="contenedorPosicion">
+            <div class="contPosicion">
                 <article class="posicionTarj">  
                     <picture class="posicionTarjImg">
                         <img src=${prod.imagen} alt=${prod.nombre}>
@@ -18,7 +18,7 @@ function renderizarProds() {
                     <div class="posicionTarjCont">
                         <h5>${prod.nombre}</h5>
                         <p>${prod.codigo}</p>
-                        <p>${prod.componentes}</p>
+                        <p>${prod.detalles}</p>
                         <p>$ ${prod.precio}</p>
                         <button id= "bot${prod.codigo}" class="estilosBtn" class="porEncimaBtn">LO QUIERO</button>
                     </div> 
@@ -68,7 +68,7 @@ function agregarCarrito(prodSelec) {
         <tr>
             <td>${prodSelec.nombre}</td>
             <td>${prodSelec.codigo}</td>
-            <td>${prodSelec.componentes}</td>
+            <td>${prodSelec.detalles}</td>
             <td>${prodSelec.precio}</td>
             <td><button onclick="borrar(event)">🗑️</button></td>
         </tr>
@@ -81,22 +81,17 @@ function agregarCarrito(prodSelec) {
 //Borrar productos que se seleccionar de la tabla
 //Al presionar el cesto de basura de cualquier producto, se pasa los datos del evento
 function borrar(ev) {
-    console.log(ev);
     //Se identifica quién disparó el evento y que su padre es la fila 
     let fila = ev.target.parentElement.parentElement
-    console.log(fila);
     //Luego a esa fila se le toma su segundo hijo, obteniéndose el código
     let codigo = fila.children[1].innerText;
-    console.log(codigo);
     //Con el código, se busca ese producto dentro del índice y se guarda
     let indice = carroCompras.findIndex(prod => prod.codigo == codigo);
-    console.log(indice);
-    //Con ese codigo se borra el producto del carro de compras
+    //Luego se borra el producto del carro de compras
     carroCompras.splice(indice, 1);
-    console.table(carroCompras);
-    //Elimina la línea de la tabla
+    //Se elimina la línea de la tabla
     fila.remove();
-    //Recalcular la inversión total
+    //Se recalcula la inversión total
     let preciosTabla = carroCompras.reduce((acumulador, prod) => acumulador + prod.precio, 0);
     document.getElementById("totalCompra").innerHTML = "Tu inversion total es $: " + preciosTabla;
 }
@@ -128,42 +123,41 @@ let correo = document.getElementById("email");
 user.oninput = () => {
     const recibeNum = /\d/;
     if (recibeNum.test(user.value)) {
-        user.style.color = "red";
+        user.classList.add("error");
         console.log("Se admiten solo letras en minúscula");
     } else {
-        user.style.color = "black";
+        user.classList.remove("error");
         console.log("Bienvenida a tu Tienda de Belleza");
     }
-};
+}
 
 //Validación campo pass para que se coloquen sólo números y que sean al menos 6.
 pass.onchange = () => {
     if ((pass.value.length < 6) || isNaN(pass.value) == true) {
-        pass.style.color = "red";
+        pass.classList.add("error");
         console.log("Solo se aceptan caracteres numéricos, y como mínimo que sean 6")
     }
 }
 
+
 //Validación campo correo para que contenga el "@ y un "."
 correo.onchange = () => {
     if (/\S+@\S+\.\S+/.test(correo.value) == false) {
-        correo.style.color = "red";
-        console.log("Revise su dirección de correo")
+        correo.classList.add("error");
+        console.log("Revisa tu correo");
     }
-};
+}
+//La 1° validación del botón enviar datos se realiza con el atributo "required" en el HTML
 
-//Botón resetear 
+
+//Botón resetear para borrar no solo el contenido de cada campo, sino el error asociado al color rojo.
 const reseteo = document.getElementById("btnReset");
 
-document.addEventListener("click",function(){
-    reseteo.addEventListener("reset", function(){
-        pass.style.color ="black";
-        reseteo.reset();
-        });
-})
-
-
-//La 1° validación del botón enviar datos se realiza con el atributo "required" en el HTML
+reseteo.addEventListener("click", function () {
+    user.classList.remove("error");
+    pass.classList.remove("error");
+    correo.classList.remove("error");
+});
 
 
 //Tomo el formulario para vaciarlo al ser enviado

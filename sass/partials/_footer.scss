@@ -1,5 +1,4 @@
-footer {
-    display: flex;
+footer{
     justify-content:space-around;
     align-items: center;
     background-color:  var(--secondary);
@@ -8,5 +7,12 @@ footer {
     margin-top: auto;
     font-size: 2.3em;
     padding: 2rem 7rem;
+}
+
+@media (max-width:320px) {
+    footer{ 
+        flex-direction: column;
+        padding: 0;
+    }
 }
 
